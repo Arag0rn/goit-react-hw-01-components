@@ -11,20 +11,14 @@ export const Tr = styled.tr`
 background-color: #00bcd5;
 height: 50px;
 color: white;
-
-
 `
 export const TabString= styled.tr`
 &:nth-child(2n) {
     background-color: #f7f7f7; 
   }
-
-
 `
 
 export const Td = styled.td`
 text-align: center;
 height: 50px;
-
-
 `
