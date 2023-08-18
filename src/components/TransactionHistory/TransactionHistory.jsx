@@ -1,24 +1,24 @@
-import {TransTable} from "./TransactionHistory.styled"
+import {Table, Tr, Td , TabString} from "./TransactionHistory.styled"
 
 export const TransactionHistory = ({ items }) => {
   return (
-    <table className="transaction-history"> {/* Замените class на className */}
-      <TransTable>
-        <tr>
+    <Table className="transaction-history">
+      <thead>
+        <Tr>
           <th>Type</th>
           <th>Amount</th>
           <th>Currency</th>
-        </tr>
-      </TransTable>
+        </Tr>
+      </thead>
       <tbody>
         {items.map(({ type, amount, currency, id }) => (
-          <tr key={id}>
-            <td>{type}</td>
-            <td>{amount}</td>
-            <td>{currency}</td>
-          </tr>
+          <TabString key={id}>
+            <Td >{type}</Td>
+            <Td >{amount}</Td>
+            <Td >{currency}</Td>
+          </TabString>
         ))}
       </tbody>
-    </table>
+    </Table>
   );
 };
